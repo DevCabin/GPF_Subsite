@@ -41,6 +41,70 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* thus begins columns */
+.col-1 {
+  width: 100%; }
+
+.cont .col-1 {
+  width: 100%;
+  margin: 0 3.8%; }
+
+.col-2 {
+  width: 50%; }
+
+.cont .col-2 {
+  width: 50%;
+  margin: 0 3.8%; }
+
+.col-3 {
+  width: 33.33%; }
+
+.cont .col-3 {
+  width: 33.33%;
+  margin: 0 3.8%; }
+
+.col-4 {
+  width: 25%; }
+
+.cont .col-4 {
+  width: 25%;
+  margin: 0 3.8%; }
+
+.col-5 {
+  width: 20%; }
+
+.cont .col-5 {
+  width: 20%;
+  margin: 0 3.8%; }
+
+.col-6 {
+  width: 16.66%; }
+
+.cont .col-6 {
+  width: 16.66%;
+  margin: 0 3.8%; }
+
+.col-7 {
+  width: 14.28%; }
+
+.cont .col-7 {
+  width: 14.28%;
+  margin: 0 3.8%; }
+
+.col-8 {
+  width: 12.5%; }
+
+.cont .col-8 {
+  width: 12.5%;
+  margin: 0 3.8%; }
+
+.col-9 {
+  width: 11.11%; }
+
+.cont .col-9 {
+  width: 11.11%;
+  margin: 0 3.8%; }
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
