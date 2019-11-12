@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<!-- content.php -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -57,3 +57,4 @@
 		<?php gpf_sub_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+<!-- // content.php -->

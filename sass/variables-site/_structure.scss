@@ -1,2 +1,12 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+$container-desktop: 1140px;
+
+.cont {
+  @include center-block;
+}
+@media screen and (min-width: 1140px) {
+  .cont {
+    width: $container-desktop;
+  }
+}
