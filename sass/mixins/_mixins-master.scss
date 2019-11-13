@@ -11,6 +11,11 @@
 	margin-right: auto;
 }
 
+// Center block
+@mixin center-content {
+	text-align: center;
+}
+
 // Clearfix
 @mixin clearfix() {
 	content: "";

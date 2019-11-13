@@ -16,7 +16,9 @@ get_header();
 
 				get_template_part( 'template-parts/main', 'banner' );
 
-				get_template_part( 'template-parts/content', 'page' );
+				get_template_part( 'template-parts/content', 'frontpage' );
+
+				get_template_part( 'template-parts/product', 'slider' );
 
 		endwhile; // End of the loop.
 		?>

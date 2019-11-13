@@ -26,20 +26,20 @@
 
 	<header id="masthead" class="site-header">
 		<div class="cont">
+			<div class="top-nav">
+				<div  class="home-link">
+					<a href="/"><span>&lt;</span> Grand Prairie Foods</a>
+				</div>
+				<div class="top-search">
+					<input type="search" placeholder="Search">
+				</div>
+			</div>
 			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<!--div class="logo-bg"></div-->
+				<?php the_custom_logo(); ?>
 					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$gpf_sub_description = get_bloginfo( 'description', 'display' );
-				if ( $gpf_sub_description || is_customize_preview() ) :
+						$gpf_sub_description = get_bloginfo( 'description', 'display' );
+						if ( $gpf_sub_description || is_customize_preview() ) :
 					?>
 				<?php endif; ?>
 			</div><!-- .site-branding -->

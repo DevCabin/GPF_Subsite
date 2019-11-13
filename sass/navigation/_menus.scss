@@ -2,7 +2,6 @@
 	clear: both;
 	display: block;
 	float: right;
-	//width: 100%;
 
 	ul {
 		display: none;
@@ -62,6 +61,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 	.current_page_item > a,
@@ -84,8 +85,18 @@
 	.main-navigation ul {
 		display: block;
 	}
+	.main-navigation ul li {
+		width: 200px;
+	}
 }
-
+@media screen and (max-width: 37.4em) {
+	.main-navigation {
+		width: 100%;
+	}
+	.main-navigation ul li {
+		width: 100%;
+	}
+}
 .comment-navigation,
 .posts-navigation,
 .post-navigation {

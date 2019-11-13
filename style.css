@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* Brand Specific */
 @import url("https://use.typekit.net/eya3jxh.css");
 .cont {
   display: block;
@@ -425,7 +426,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #000;
   font-family: nobel, sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -610,11 +611,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #000; }
   a:visited {
-    color: purple; }
+    color: #1A1818; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #A5191D; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -657,7 +658,9 @@ a {
     margin-right: auto; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold; }
 
 /* Small menu. */
 .menu-toggle,
@@ -669,7 +672,16 @@ a {
     display: none; }
 
   .main-navigation ul {
-    display: block; } }
+    display: block; }
+
+  .main-navigation ul li {
+    width: 200px; } }
+@media screen and (max-width: 37.4em) {
+  .main-navigation {
+    width: 100%; }
+
+  .main-navigation ul li {
+    width: 100%; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -686,9 +698,6 @@ a {
 /*--------------------------------------------------------------
 ## Sitewide Header
 --------------------------------------------------------------*/
-.site-header .site-branding img {
-  max-width: 150px; }
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -819,6 +828,175 @@ a {
 .bypostauthor {
   display: block; }
 
+/*--------------------------------------------------------------
+Site styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Site Main Header
+--------------------------------------------------------------*/
+.site-header {
+  background-color: #F4C216;
+  height: auto; }
+
+.top-nav {
+  float: none;
+  padding: 12px; }
+  .top-nav .top-search, .top-nav .home-link {
+    display: inline-block;
+    font-size: .8rem; }
+  .top-nav .home-link {
+    padding-right: 14px; }
+    .top-nav .home-link a {
+      text-decoration: none; }
+    .top-nav .home-link span {
+      display: none;
+      font-size: 1.7rem;
+      position: relative;
+      top: 4px;
+      left: -4px;
+      font-weight: lighter; }
+  .top-nav .top-search input {
+    border-radius: 20px;
+    padding: 2px 0 2px 12px; }
+
+.site-branding {
+  width: 250px;
+  height: 150px;
+  float: left;
+  margin: 12px; }
+
+.site-header .site-branding img {
+  max-width: 250px;
+  float: left; }
+
+.main-navigation {
+  position: relative;
+  top: -8px;
+  left: 8px; }
+  .main-navigation li {
+    padding-top: 12px; }
+
+.main-banner {
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.banner-content {
+  position: relative;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.73);
+  width: 75%;
+  height: 450px;
+  margin: 0px 12.5%; }
+  .banner-content h2 {
+    text-transform: uppercase;
+    color: #273976;
+    font-weight: normal;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 2.2rem;
+    line-height: 2.2rem; }
+  .banner-content p {
+    font-size: 1.5rem; }
+
+.btn {
+  background: #A5191D;
+  padding: 12px 55px;
+  border-radius: 24px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: normal; }
+  .btn:hover {
+    color: #F4C216;
+    text-decoration: underline; }
+
+.home-flourish {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  top: -1.2rem;
+  max-width: 75%; }
+  .home-flourish h2 {
+    color: white;
+    position: relative;
+    top: -65px; }
+
+.center-content {
+  text-align: center; }
+
+.front-page .cont .entry-content {
+  margin-top: -5rem;
+  padding: 0 8%; }
+
+/*--------------------------------------------------------------
+Responsive - Large screens
+--------------------------------------------------------------*/
+@media screen and (min-width: 1140px) {
+  .site-header {
+    height: 125px; }
+
+  .main-navigation {
+    top: -65px; }
+
+  .main-navigation li {
+    padding-top: 0; }
+
+  .banner-content {
+    margin: 0 0;
+    width: 32%;
+    right: -55%; }
+
+  .site-branding, .top-nav {
+    padding: none;
+    margin: auto; }
+
+  .home-flourish {
+    width: 600px; }
+    .home-flourish h2 {
+      top: -80px; } }
+/*--------------------------------------------------------------
+Responsive - mid-size screens
+--------------------------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 1139px) {
+  .banner-content {
+    width: 50%;
+    margin: 0px 25%;
+    right: auto; }
+
+  .site-header {
+    height: auto; }
+
+  .main-navigation {
+    top: auto; } }
+/*--------------------------------------------------------------
+Responsive - all above small
+--------------------------------------------------------------*/
+@media screen and (min-width: 600px) {
+  .top-nav .home-link span {
+    display: inline-block; }
+
+  .top-nav {
+    float: right; }
+
+  .home-link span {
+    display: inline-block; }
+
+  .home-flourish h2 {
+    top: -80px; }
+
+  .front-page .cont .entry-content {
+    margin-top: -6rem;
+    padding: 0 14%; }
+
+  .product-slider .slider-content {
+    text-align: center; }
+    .product-slider .slider-content img {
+      display: inline-block;
+      margin: 0 12px; } }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
