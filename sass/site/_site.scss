@@ -26,6 +26,7 @@ Site Main Header
 .top-nav {
   float: none;
   padding: 12px;
+  text-align: center;
   .top-search, .home-link {
     display: inline-block;
     font-size: .8rem;
@@ -52,17 +53,19 @@ Site Main Header
     }
   }
 }
+
 .site-branding {
-  width:250px;
-  height:150px;
-  float: left;
-  margin: 12px;
+    width: auto;
+    height: 60px;
+    float: left;
+    margin: 12px;
+}
+.site-header .site-branding img {
+    width: auto;
+    float: left;
+    height: 100px;
 }
 
-.site-header .site-branding img {
-  max-width: 250px;
-  float: left;
-}
 .main-navigation {
   position: relative;
   top: -8px;
@@ -70,6 +73,10 @@ Site Main Header
   li {
     padding-top: 12px;
   }
+}
+// styling for slicknav plugin
+.slicknav_nav li a {
+    text-align: center;
 }
 .main-banner {
   height: 450px;
@@ -131,7 +138,78 @@ Site Main Header
 .front-page .cont .entry-content {
     margin-top: -5rem;
     padding: 0 8%;
+}
+
+// slick slider
+.product-slider {
+  .slider-content {
+    @include center-content;
+    height: 350px;
   }
+}
+.product-slider h3 {
+  text-align: center;
+  color: $color__brown;
+  text-transform: uppercase;
+  font-size:2rem;
+  padding-top: 22px;
+}
+.prod-single {
+  background-color: white;
+  text-align: center;
+  padding: 0 0 20px 0;
+  margin: 0;
+  width: 200px;
+  margin: 0 14px;
+  p {
+    padding: 0 10px;
+    color: $color__textgray;
+  }
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+.site-footer {
+  background-color: $color__darkblue;
+  padding: 50px 0;
+  color: white;
+  div {color: white;}
+  a {color:white;}
+}
+
+
+.pre-footer {
+  @include center-content;
+}
+.pre-footer {
+  padding:0 25%;
+}
+.site-info {
+  text-transform: uppercase;
+  font-size:.75rem;
+  font-weight: lighter;
+}
+.info-left, .info-center, .info-right{
+  width:100%;
+  @include center-content;
+}
+.info-left, .info-right{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.info-center ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    margin: 0 1%;
+  }
+}
+
 
 /*--------------------------------------------------------------
 Responsive - Large screens
@@ -161,6 +239,28 @@ Responsive - Large screens
       top: -80px;
     }
   }
+  .pre-footer {
+    padding:0 25%;
+  }
+  .info-left{
+    float:left;
+    text-align: left;
+    width:33%;
+  }
+  .info-center{
+    float:left;
+    text-align: center;
+    width:33%;
+  }
+  .info-right {
+    width:33%;
+    float:right;
+    text-align: right;
+  }
+  .info-left, .info-right{
+    padding-top: 2rem;
+    padding-bottom: 0;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -173,12 +273,20 @@ Responsive - mid-size screens
     right: auto;
   }
   .site-header {
+    height: 135px;
+  }
+  .main-navigation {
+    top: -80px;
+  }
+}
+@media screen and (min-width:600px) and (max-width:860px){
+
+  .site-header {
     height: auto;
   }
   .main-navigation {
-    top: auto;
+    top: 0px;
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -196,6 +304,17 @@ Responsive - all above small
       display: inline-block;
     }
   }
+  .site-branding {
+    width: 250px;
+    height: 150px;
+    float: left;
+     }
+
+  .site-header .site-branding img {
+    max-width: 250px;
+    height: auto;
+    float: left; }
+
   .home-flourish {
     h2 {
       top: -80px;
@@ -205,14 +324,26 @@ Responsive - all above small
     margin-top: -6rem;
     padding: 0 14%;
   }
-  .product-slider {
-    .slider-content {
-      @include center-content;
-      img {
-        display: inline-block;
-        margin: 0 12px;
-      }
+  // slick slider
+
+  .slick-next {
+    right: -35px;
+  }
+  .slick-prev {
+    left: -65px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px;
+  }
+  .prod-single {
+    width: 250px;
+    margin: 0 25px;
+    p {
+      padding: 0 20px;
     }
   }
+  // END // slick slider
+  // footer
+
 
 }

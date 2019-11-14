@@ -17,6 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/assets/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/assets/slick/slick-theme.css" />
+
 	<?php wp_head(); ?>
 </head>
 
@@ -45,8 +48,9 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gpf_sub' ); ?></button>
 				<?php
+			//	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gpf_sub' ); </button>
+
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',

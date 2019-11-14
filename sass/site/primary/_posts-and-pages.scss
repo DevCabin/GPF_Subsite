@@ -6,6 +6,9 @@
 .page {
 	margin: 0 0 1.5em;
 }
+body.page {
+	margin: 0
+}
 
 .updated:not(.published) {
 	display: none;

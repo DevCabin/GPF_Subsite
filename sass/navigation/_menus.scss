@@ -72,12 +72,12 @@
 	}
 }
 
-/* Small menu. */
+/* Small menu.
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
-
+*/
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -97,6 +97,7 @@
 		width: 100%;
 	}
 }
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
