@@ -20,6 +20,10 @@ get_header();
 
 				get_template_part( 'template-parts/product', 'slider' );
 
+				get_template_part( 'template-parts/home', 'cta' );
+
+				get_template_part( 'template-parts/home', 'cta-2' );
+
 		endwhile; // End of the loop.
 		?>
 
