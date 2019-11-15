@@ -16,6 +16,21 @@
 	<footer id="colophon" class="site-footer">
 		<div class="cont">
 
+			<div class="footer-menu">
+				<div class="menu-flourish">
+				<img src="/wp-content/uploads/2019/11/footer-bg-1.png" alt="">
+					<?php // footer menu ;?>
+					<ul class="menu">
+						<li><a href="http://start-healthy-microsite.local/where-to-buy/">Where to Buy</a></li>
+						<li><a href="http://start-healthy-microsite.local/contact-us/">Contact Us</a></li>
+					  <li><a href="http://start-healthy-microsite.local/our-products/">Our Products</a></li>
+					  <li><a href="http://start-healthy-microsite.local/where-to-buy/">Where to Buy</a></li>
+					  <li><a href="http://start-healthy-microsite.local/contact-us/">Contact Us</a></li>
+					</ul>
+				</div>
+
+			</div>
+
 			<div class="pre-footer">
 				<img src="/wp-content/uploads/2019/11/foot-logo.png" alt="grand prairie foods logo version 2">
 				<p>Manufactured by Grand Prairie Foods, inc.<br>

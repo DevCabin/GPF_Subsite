@@ -22,6 +22,10 @@
 
     </div> <!-- cta-2-content -->
 
+<div class="yellow-flourish">
+
+</div>
 
   </div> <!-- container -->
 </section>
+<div class="blue-block"></div>

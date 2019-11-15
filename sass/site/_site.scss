@@ -200,9 +200,6 @@ Site Main Header
     top: 0;
     float: left;
     padding: 0 4% 20px 4%;
-    p {
-      // padding:0 75px 20px 0;
-    }
   }
   .cta-right {
     width: 98%;
@@ -211,10 +208,13 @@ Site Main Header
 }
 .home-flourish-2 {
     padding-top: 24px;
-  }
+}
 .home-cta-2 {
     background-color: $color__yellow;
     display: inline-block;
+    .cont {
+      background-color: $color__yellow;
+    }
     h3 {
       color: white;
       margin-top: -48px;
@@ -243,6 +243,12 @@ Site Main Header
         padding-bottom: 20px;
       }
     }
+  }
+  .blue-block {
+    display: none;
+  }
+  .yellow-flourish {
+    display: none;
   }
 
 /*--------------------------------------------------------------
@@ -362,6 +368,26 @@ Responsive - Large screens
         float: none;
       }
     }
+    .blue-block {
+      display: block;
+      height:350px;
+      width: 100%;
+      background-color: $color__darkblue;
+      position: relative;
+      margin-top: -300px;
+      z-index: 2;
+    }
+    .yellow-flourish {
+      display: block;
+      background-image:url('/wp-content/uploads/2019/11/yellow-flourish-t.png');
+      background-color: $color__darkblue;
+      background-size: cover;
+      background-position: center;
+      width: 1140px;
+      height: 80px;
+      position: relative;
+      z-index: 3;
+    }
 
       .pre-footer {
         padding:0 25%;
@@ -426,9 +452,8 @@ Responsive - mid-size screens
   .main-navigation {
     top: 0px;
   }
-
   .home-cta-2 {
-    background-color: #F4C216;
+    background-color: $color__yellow !important;
     display: inline-block !important;
     height: 510px;
   }
@@ -509,8 +534,10 @@ Responsive - all above small
   }
   // END // slick slider
   .home-cta-2 {
-      background-color: $color__yellow;
+      background-color: transparent;
       display: block;
+      position: relative;
+      z-index: 3;
       h3 {
         color: white;
         margin-top: -68px;
@@ -518,10 +545,11 @@ Responsive - all above small
       }
 
       .cta-2-left {
-        width: 48%;
+        width: 49%;
         display: inline-block;
         float: none;
-        margin-top:65px;
+        margin-top: 65px;
+        padding-left: 8%;
       }
       .cta-2-right {
         width: 50%;
@@ -537,7 +565,6 @@ Responsive - all above small
         }
       }
     }
-
 
 
 

@@ -118,3 +118,61 @@
 		width: 50%;
 	}
 }
+/*--------------------------------------------------------------
+Footer menu
+--------------------------------------------------------------*/
+
+.footer-menu {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+}
+.footer-menu .menu {
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.footer-menu ul {
+	padding-left:0;
+	margin-left:0;
+	li {
+		list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+		a {
+			color: black;
+			text-transform: uppercase;
+		}
+	}
+}
+.menu-flourish img {
+	display: none;
+}
+
+
+@media screen and (min-width:1140px){
+	.menu-flourish img {
+		display: block;
+	}
+	.footer-menu {
+		position: relative;
+		margin-top: -50px;
+		margin-bottom: 50px;
+		background-color: transparent;
+		.menu {
+			position: relative;
+			margin-top: -50px;
+			text-align: center;
+		}
+	}
+	.footer-menu ul {
+		li {
+			width: 200px;
+		}
+	}
+
+}

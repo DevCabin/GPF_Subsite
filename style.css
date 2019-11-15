@@ -697,6 +697,52 @@ a {
   width: 50%; }
 
 /*--------------------------------------------------------------
+Footer menu
+--------------------------------------------------------------*/
+.footer-menu {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white; }
+
+.footer-menu .menu {
+  position: relative;
+  margin-top: 0px;
+  text-align: center; }
+
+.footer-menu ul {
+  padding-left: 0;
+  margin-left: 0; }
+  .footer-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0; }
+    .footer-menu ul li a {
+      color: black;
+      text-transform: uppercase; }
+
+.menu-flourish img {
+  display: none; }
+
+@media screen and (min-width: 1140px) {
+  .menu-flourish img {
+    display: block; }
+
+  .footer-menu {
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    background-color: transparent; }
+    .footer-menu .menu {
+      position: relative;
+      margin-top: -50px;
+      text-align: center; }
+
+  .footer-menu ul li {
+    width: 200px; } }
+/*--------------------------------------------------------------
 ## Sitewide Header
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1006,6 +1052,8 @@ Site Main Header
 .home-cta-2 {
   background-color: #F4C216;
   display: inline-block; }
+  .home-cta-2 .cont {
+    background-color: #F4C216; }
   .home-cta-2 h3 {
     color: white;
     margin-top: -48px;
@@ -1029,6 +1077,12 @@ Site Main Header
       font-weight: normal; }
     .home-cta-2 .cta-2-right p {
       padding-bottom: 20px; }
+
+.blue-block {
+  display: none; }
+
+.yellow-flourish {
+  display: none; }
 
 /*--------------------------------------------------------------
 Footer
@@ -1137,6 +1191,26 @@ Responsive - Large screens
       display: inline-block;
       float: none; }
 
+  .blue-block {
+    display: block;
+    height: 350px;
+    width: 100%;
+    background-color: #273976;
+    position: relative;
+    margin-top: -300px;
+    z-index: 2; }
+
+  .yellow-flourish {
+    display: block;
+    background-image: url("/wp-content/uploads/2019/11/yellow-flourish-t.png");
+    background-color: #273976;
+    background-size: cover;
+    background-position: center;
+    width: 1140px;
+    height: 80px;
+    position: relative;
+    z-index: 3; }
+
   .pre-footer {
     padding: 0 25%; }
 
@@ -1194,7 +1268,7 @@ Responsive - mid-size screens
     top: 0px; }
 
   .home-cta-2 {
-    background-color: #F4C216;
+    background-color: #F4C216 !important;
     display: inline-block !important;
     height: 510px; }
 
@@ -1260,17 +1334,20 @@ Responsive - all above small
       padding: 0 20px; }
 
   .home-cta-2 {
-    background-color: #F4C216;
-    display: block; }
+    background-color: transparent;
+    display: block;
+    position: relative;
+    z-index: 3; }
     .home-cta-2 h3 {
       color: white;
       margin-top: -68px;
       font-size: 1.75rem; }
     .home-cta-2 .cta-2-left {
-      width: 48%;
+      width: 49%;
       display: inline-block;
       float: none;
-      margin-top: 65px; }
+      margin-top: 65px;
+      padding-left: 8%; }
     .home-cta-2 .cta-2-right {
       width: 50%;
       display: inline-block;
