@@ -9,6 +9,12 @@
  * @package GPF_Subsite
  */
 
+$footer_color = 'default';
+
+if ( is_page('our-products') | is_page('product-single') ) {
+	$footer_color = 'yellow';
+}
+
 ?>
 
 	</div><!-- #content -->
@@ -16,17 +22,24 @@
 	<footer id="colophon" class="site-footer">
 		<div class="cont">
 
-			<div class="footer-menu">
+			<div class="footer-menu <?php echo $footer_color; ?>">
 				<div class="menu-flourish">
-				<img src="/wp-content/uploads/2019/11/footer-bg-1.png" alt="">
-					<?php // footer menu ;?>
-					<ul class="menu">
-						<li><a href="http://start-healthy-microsite.local/where-to-buy/">Where to Buy</a></li>
-						<li><a href="http://start-healthy-microsite.local/contact-us/">Contact Us</a></li>
-					  <li><a href="http://start-healthy-microsite.local/our-products/">Our Products</a></li>
-					  <li><a href="http://start-healthy-microsite.local/where-to-buy/">Where to Buy</a></li>
-					  <li><a href="http://start-healthy-microsite.local/contact-us/">Contact Us</a></li>
-					</ul>
+
+				<?php if ($footer_color == 'yellow') { ?>
+					<img id="yellow-flourish" src="/wp-content/uploads/2019/11/footer-bg-2.png" alt="">
+				<?php } else { ?>
+					<img id="white-flourish" src="/wp-content/uploads/2019/11/footer-bg-1.png" alt="">
+				<?php }; ?>
+
+					<nav id="footer-navigation" class="secondary-navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'footer-menu',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
+
 				</div>
 
 			</div>

@@ -14,10 +14,14 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	background-color: $color__form-bg;
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	//border: 1px solid $color__border-input;
+	border: none;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 3px 0 3px 6px;
+	margin: 3px 0;
+	width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -30,4 +34,7 @@ select {
 
 textarea {
 	width: 100%;
+}
+.contact textarea {
+	height:100px;
 }

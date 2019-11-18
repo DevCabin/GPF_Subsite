@@ -8,7 +8,7 @@
  */
 
 ?>
-<!-- content-page.php -->
+<!-- content-content.php -->
 <div class="cont">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -17,15 +17,17 @@
 
 	<?php gpf_sub_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+	<div class="entry-content contact">
+			<div class="contact-left">
+				<?php the_content(); ?>
+			</div>
+			<div class="contact-right">
+				<?php the_field('contact_form');?>
+			</div>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gpf_sub' ),
-			'after'  => '</div>',
-		) );
-		?>
+		<div class="contact-map">
+			<?php the_field('map_area_code');?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -51,5 +53,5 @@
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+<!-- // content-contact.php -->
 </div>
-<!-- // content-page.php -->

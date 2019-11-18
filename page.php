@@ -1,13 +1,5 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package GPF_Subsite
  */
@@ -22,12 +14,22 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			if (is_page( 'contact' )){
+				get_template_part( 'template-parts/content', 'contact' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				get_template_part( 'template-parts/home', 'cta-2' );
+
+			} elseif (is_page( 'our-products' )) {
+				
+				get_template_part( 'template-parts/content', 'products' );
+
+			}
+			else {
+				get_template_part( 'template-parts/content', 'page' );
+
+				get_template_part( 'template-parts/home', 'cta-2' );
+
+			}
 
 		endwhile; // End of the loop.
 		?>
@@ -36,5 +38,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

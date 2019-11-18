@@ -243,13 +243,46 @@ Site Main Header
         padding-bottom: 20px;
       }
     }
+}
+.blue-block {
+  display: none;
+}
+.yellow-flourish {
+  display: none;
+}
+
+// SUB pages
+
+.page .cont {
+  padding: 12px;
+}
+#page .entry-header h1 {
+  padding: 20px 0;
+}
+
+// Contact page
+.contact-map {
+
+}
+.contact-left, .contact-right {
+  width: 98%;
+  float: left;
+}
+
+.page {
+  .entry-content {
+    margin: 0;
   }
-  .blue-block {
-    display: none;
+  .entry-header h1 {
+    text-transform: uppercase;
+    color: $color__brown;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
   }
-  .yellow-flourish {
-    display: none;
-  }
+}
+
+
 
 /*--------------------------------------------------------------
 Footer
@@ -294,11 +327,19 @@ Footer
   }
 }
 
-
 /*--------------------------------------------------------------
 Responsive - Large screens
 --------------------------------------------------------------*/
 @media screen and (min-width:1140px){
+  .footer-menu.yellow {
+    margin-top: -85px;
+    li a:hover {
+      color: white;
+    }
+  }
+  .page .cont {
+    padding: 0;
+  }
   .site-header {
     height: 125px;
   }
@@ -411,8 +452,29 @@ Responsive - Large screens
         padding-top: 2rem;
         padding-bottom: 0;
       }
-}
 
+      // Contact page
+      .contact-map {
+        background-color: $color__lightblue;
+        padding: 25px 12px;
+        float: left;
+        width: 100%;
+      }
+      .contact-left, .contact-right {
+        width: 50%;
+      }
+      .contact-left {
+        padding-right:4%;
+      }
+      .site-main {
+        padding: 0;
+        h1 {
+          padding: 0;
+        }
+      }
+
+
+}
 /*--------------------------------------------------------------
 Responsive - mid-size screens
 --------------------------------------------------------------*/
@@ -484,6 +546,7 @@ Responsive - mid-size screens
 Responsive - all above small
 --------------------------------------------------------------*/
 @media screen and (min-width:600px) {
+
   .top-nav .home-link span {
     display: inline-block;
   }

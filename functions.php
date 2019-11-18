@@ -45,6 +45,7 @@ if ( ! function_exists( 'gpf_sub_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'gpf_sub' ),
+			'menu-2' => esc_html__( 'Footer', 'gpf_sub' ),
 		) );
 
 		/*
@@ -74,7 +75,7 @@ if ( ! function_exists( 'gpf_sub_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
+			'height'      => 150,
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
