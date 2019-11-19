@@ -21,6 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/assets/slick/slick-theme.css" />
 
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>

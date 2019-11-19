@@ -12,7 +12,7 @@
 
 
 <div class="home-flourish">
-<img src="/wp-content/uploads/2019/11/home-flourish.png" alt="">
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Brown-banner@2x.png" alt="">
 	<?php // custom field for title ;?>
 	<h2>OUR SITE TITLE</h2>
 </div>

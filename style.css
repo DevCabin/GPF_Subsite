@@ -928,15 +928,14 @@ Site Main Header
     padding: 2px 0 2px 12px; }
 
 .site-branding {
-  width: auto;
-  height: 60px;
-  float: left;
-  margin: 12px; }
+  width: 75%;
+  float: none;
+  margin: 0 auto; }
 
 .site-header .site-branding img {
   width: auto;
   float: left;
-  height: 100px; }
+  height: auto; }
 
 .main-navigation {
   position: relative;
@@ -1120,6 +1119,41 @@ Site Main Header
   padding: 0;
   margin: 0; }
 
+.product-grid {
+  text-align: center; }
+  .product-grid .prod-single {
+    display: inline-block;
+    border: 1px solid #ededed;
+    box-shadow: lightgrey 2px 0px 4px 2px;
+    margin: 0 8px 34px 8px; }
+
+.product-sort {
+  margin: 14px 8px; }
+
+.home-flourish.product-flourish {
+  margin-top: 0;
+  margin-bottom: 70px; }
+  .home-flourish.product-flourish h2 {
+    margin-top: -58px; }
+
+select.filters-select {
+  -webkit-appearance: none;
+  background-color: white;
+  background-image: url("/wp-content/themes/GPF_Subsite/assets/img/down-caret-1.png");
+  background-position: 175px 20px;
+  background-repeat: no-repeat;
+  color: #707070;
+  padding: 0 0 0 12px;
+  border: 1px solid;
+  border-color: #ccc;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  height: 45px; }
+
+select::-ms-expand {
+  display: none; }
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -1160,10 +1194,19 @@ Footer
     width: 50px;
     margin: 0 1%; }
 
+#footer-logo {
+  position: relative;
+  left: 12px;
+  top: 8px;
+  width: 85px; }
+
 /*--------------------------------------------------------------
 Responsive - Large screens
 --------------------------------------------------------------*/
 @media screen and (min-width: 1140px) {
+  .main-navigation a {
+    font-size: 1.2rem; }
+
   .footer-menu.yellow {
     margin-top: -85px; }
     .footer-menu.yellow li a:hover {
@@ -1306,7 +1349,7 @@ Responsive - mid-size screens
     height: 135px; }
 
   .main-navigation {
-    top: -80px; }
+    top: -100px; }
 
   .home-cta {
     display: inline-block !important; }
@@ -1327,6 +1370,9 @@ Responsive - mid-size screens
 
   .main-navigation {
     top: 0px; }
+    .main-navigation ul li {
+      width: 190px;
+      text-align: center !important; }
 
   .home-cta-2 {
     background-color: #F4C216 !important;
@@ -1357,7 +1403,14 @@ Responsive - all above small
     display: inline-block; }
 
   .top-nav {
-    float: right; }
+    float: right;
+    padding: 0; }
+
+  .main-navigation {
+    left: 0; }
+
+  .main-navigation ul li {
+    text-align: right; }
 
   .home-link span {
     display: inline-block; }
@@ -1368,12 +1421,12 @@ Responsive - all above small
     float: left; }
 
   .site-header .site-branding img {
-    max-width: 250px;
+    max-width: 285px;
     height: auto;
     float: left; }
 
   .home-flourish h2 {
-    margin-top: -63px; }
+    margin-top: -58px; }
 
   .front-page .cont .entry-content {
     margin-top: 2%;

@@ -26,9 +26,9 @@ if ( is_page('our-products') | is_page('product-single') ) {
 				<div class="menu-flourish">
 
 				<?php if ($footer_color == 'yellow') { ?>
-					<img id="yellow-flourish" src="/wp-content/uploads/2019/11/footer-bg-2.png" alt="">
+					<img id="yellow-flourish" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Yellow-banner@2x.png" alt="">
 				<?php } else { ?>
-					<img id="white-flourish" src="/wp-content/uploads/2019/11/footer-bg-1.png" alt="">
+					<img id="white-flourish" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/white-footer-nav-block@2x.png" alt="">
 				<?php }; ?>
 
 					<nav id="footer-navigation" class="secondary-navigation">
@@ -62,7 +62,7 @@ if ( is_page('our-products') | is_page('product-single') ) {
 					</ul>
 				</div>
         <div class="info-right">
-					Site Developed By <a href="https://patientxagency.com">PatientX</a>
+					Site Developed By <a href="https://patientxagency.com"><img id="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/PX_cmyk_logo_WHITE-TEXT@2x.png" alt="Patient X Logo"></a>
 				</div>
 			</div><!-- .site-info -->
 		</div><!-- end cont -->
@@ -73,8 +73,11 @@ if ( is_page('our-products') | is_page('product-single') ) {
 <?php wp_footer(); ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/slick/slick.min.js"></script>
+
+
 
 </body>
 </html>
