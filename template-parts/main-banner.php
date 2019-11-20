@@ -1,4 +1,4 @@
-<section class="main-banner" style="background-image:url('<?php // custom field - BG IMG ?>../wp-content/uploads/2019/11/main-banner-1.png')">
+<section class="main-banner" style="background-image:url('<?php // custom field - BG IMG ?><?php echo get_stylesheet_directory_uri(); ?>/assets/img/main-banner-1-min.jpg')">
   <div class="cont">
     <div class="banner-content">
       <h2>the complete grab n’ go breakfast</h2>

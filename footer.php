@@ -11,7 +11,7 @@
 
 $footer_color = 'default';
 
-if ( is_page('our-products') | is_page('product-single') ) {
+if ( is_page('our-products') | is_page('product-single') | is_singular('product') ) {
 	$footer_color = 'yellow';
 }
 

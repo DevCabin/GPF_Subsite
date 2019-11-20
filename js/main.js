@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Pre-footer product slider
     $('.multiple-items').slick({
         infinite: true,
         slidesToShow: 4,
@@ -33,7 +34,26 @@ $(document).ready(function () {
       // instead of a settings object
     ]
   });
+  // Single Product image carousel
+  $('.product-images').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      variableWidth: true,
+      dots: true,
+      responsive: [
 
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+              }]
+    });
+
+  // Product home page, sort by tags
   // init Isotope
   var $grid = $('.product-grid').isotope({
     itemSelector: '.prod-single',

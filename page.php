@@ -21,7 +21,7 @@ get_header();
 
 			} elseif (is_page( 'our-products' )) {
 				
-				get_template_part( 'template-parts/content', 'products' );
+				get_template_part( 'template-parts/content', 'product-page' );
 
 			}
 			else {

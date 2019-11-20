@@ -1,6 +1,12 @@
 <section class="product-slider" style="background-color:rgba(57,146,200,.25);">
   <div class="cont">
-    <h3>Our Products</h3>
+
+    <?php if (  is_singular('product') ) { ?>
+      <h3>you may also like these products</h3>
+    <?php } else { ?>
+      <h3>Our Products</h3>
+    <?php } ?>
+
     <div class="slider-content">
       <div class="multiple-items">
 

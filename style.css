@@ -52,69 +52,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .cont {
     width: 1140px; } }
 /* thus begins columns */
-.col-1 {
-  width: 100%; }
-
-.cont .col-1 {
-  width: 100%;
-  margin: 0 3.8%; }
-
-.col-2 {
-  width: 50%; }
-
-.cont .col-2 {
-  width: 50%;
-  margin: 0 3.8%; }
-
-.col-3 {
-  width: 33.33%; }
-
-.cont .col-3 {
-  width: 33.33%;
-  margin: 0 3.8%; }
-
-.col-4 {
-  width: 25%; }
-
-.cont .col-4 {
-  width: 25%;
-  margin: 0 3.8%; }
-
-.col-5 {
-  width: 20%; }
-
-.cont .col-5 {
-  width: 20%;
-  margin: 0 3.8%; }
-
-.col-6 {
-  width: 16.66%; }
-
-.cont .col-6 {
-  width: 16.66%;
-  margin: 0 3.8%; }
-
-.col-7 {
-  width: 14.28%; }
-
-.cont .col-7 {
-  width: 14.28%;
-  margin: 0 3.8%; }
-
-.col-8 {
-  width: 12.5%; }
-
-.cont .col-8 {
-  width: 12.5%;
-  margin: 0 3.8%; }
-
-.col-9 {
-  width: 11.11%; }
-
-.cont .col-9 {
-  width: 11.11%;
-  margin: 0 3.8%; }
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -1032,7 +969,7 @@ Site Main Header
 .prod-single {
   background-color: white;
   text-align: center;
-  padding: 0 0 20px 0;
+  padding: 0;
   margin: 0;
   width: 200px;
   margin: 0 14px; }
@@ -1153,6 +1090,65 @@ select.filters-select {
 
 select::-ms-expand {
   display: none; }
+
+.single-product h1 {
+  color: #66483B;
+  text-transform: uppercase; }
+.single-product .product-images, .single-product .product-content {
+  width: 98%;
+  display: block;
+  float: left; }
+.single-product .product-content {
+  padding-left: 3%;
+  position: relative;
+  top: -32px; }
+.single-product .product-images .prod-single {
+  width: 540px; }
+.single-product .product-images .slick-slide img {
+  display: block;
+  border: none; }
+.single-product .product-images .slick-dots li button:before {
+  font-size: 10px; }
+
+.product-details {
+  background-color: rgba(57, 146, 200, 0.25);
+  float: left;
+  width: 100%;
+  padding: 12px 2%; }
+  .product-details h2 {
+    color: #66483B;
+    text-align: center; }
+  .product-details table {
+    width: 98%;
+    float: left; }
+  .product-details td {
+    width: 48%; }
+  .product-details span {
+    font-weight: bold; }
+  .product-details .facts {
+    width: 98%;
+    float: right; }
+  .product-details .dots {
+    width: 98%;
+    border-bottom: 6px dotted;
+    margin: 18px 0px;
+    float: none; }
+  .product-details .product-flourish img {
+    display: none; }
+
+.product-reviews {
+  display: block;
+  float: left;
+  width: 100%;
+  background-color: white; }
+
+.home-flourish.product-flourish h2 {
+  margin-top: 0; }
+
+.floater, .product-reviews {
+  display: block;
+  float: left;
+  width: 100%; }
 
 /*--------------------------------------------------------------
 Footer
@@ -1289,7 +1285,7 @@ Responsive - Large screens
 
   .yellow-flourish {
     display: block;
-    background-image: url("/wp-content/uploads/2019/11/yellow-flourish-t.png");
+    background-image: url("/wp-content/themes/GPF_Subsite/assets/img/yellow-flourish-t-1.png");
     background-color: #273976;
     background-size: cover;
     background-position: center;
@@ -1335,7 +1331,67 @@ Responsive - Large screens
   .site-main {
     padding: 0; }
     .site-main h1 {
-      padding: 0; } }
+      padding: 0; }
+
+  .single-product .product-images, .single-product .product-content {
+    width: 48%;
+    display: inline-block;
+    float: left; }
+  .single-product .product-content {
+    padding-left: 3%;
+    position: relative;
+    top: -32px; }
+  .single-product .product-images .prod-single {
+    width: 545px; }
+  .single-product .product-images .slick-slide img {
+    border: 1px solid gray;
+    margin-bottom: 10px; }
+  .single-product .floater {
+    margin-bottom: 28px; }
+  .single-product .product-flourish {
+    display: block; }
+
+  .single-product .product-images .slick-dots li button:before {
+    font-size: 20px; }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 42px; }
+
+  .product-details {
+    padding: 12px 0 0 0; }
+    .product-details table {
+      width: 63%;
+      float: left; }
+    .product-details td {
+      width: 50%; }
+    .product-details span {
+      font-weight: bold; }
+    .product-details .facts {
+      width: 32%;
+      float: right; }
+    .product-details .dots {
+      width: 63%;
+      border-bottom: 6px dotted;
+      margin: 18px 0px;
+      float: none; }
+
+  #page .product-content .entry-header h1 {
+    padding: 0 !important; }
+
+  .product-reviews {
+    width: 100%;
+    background-color: white;
+    float: left;
+    padding-top: 20px;
+    min-height: 200px; }
+    .product-reviews h2 {
+      color: white; }
+
+  .home-flourish.product-flourish h2 {
+    margin-top: -50px; }
+
+  .product-details .product-flourish img {
+    display: block; } }
 /*--------------------------------------------------------------
 Responsive - mid-size screens
 --------------------------------------------------------------*/
@@ -1363,7 +1419,19 @@ Responsive - mid-size screens
     padding: 1px 0 35px 15px; }
 
   .home-cta-2 .cta-2-right p {
-    padding-bottom: 12px; } }
+    padding-bottom: 12px; }
+
+  .single-product .product-content {
+    width: 60%;
+    display: inline-block;
+    float: left; }
+  .single-product .product-images {
+    width: 40%;
+    display: inline-block;
+    float: left;
+    padding-left: 2%; }
+  .single-product .prod-single {
+    width: 275px; } }
 @media screen and (min-width: 600px) and (max-width: 860px) {
   .site-header {
     height: auto; }
@@ -1394,7 +1462,19 @@ Responsive - mid-size screens
     width: 48%;
     display: inline-block;
     float: none;
-    margin-top: 100px !important; } }
+    margin-top: 100px !important; }
+
+  .single-product .product-content {
+    width: 60%;
+    display: inline-block;
+    float: left; }
+  .single-product .product-images {
+    width: 40%;
+    display: inline-block;
+    float: left;
+    padding-left: 4%; }
+  .single-product .prod-single {
+    width: 350px; } }
 /*--------------------------------------------------------------
 Responsive - all above small
 --------------------------------------------------------------*/
