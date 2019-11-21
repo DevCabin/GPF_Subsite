@@ -4,6 +4,8 @@
  * @package GPF_Subsite
  */
 
+
+
 ?>
 <!-- content-products.php -->
 <div class="cont">
@@ -12,99 +14,128 @@
 		<?php // the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="home-flourish product-flourish">
-		<!--img src="/wp-content/uploads/2019/11/home-flourish.png" alt=""-->
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Brown-banner@2x.png" alt="">
-
-			<?php // custom field for title ;?>
 			<h2>OUR PRODUCTS</h2>
 		</div>
 	</header><!-- .entry-header -->
 
-	<?php gpf_sub_post_thumbnail(); ?>
-
-	<div class="entry-content products" style="min-height:800px;">
-		<div class="product-sort custom-select">
-
-				<select class="filters-select">
-					<option value="*">Show All</option>
-					<option value=".chicken">chicken</option>
-					<option value=".beef">beef</option>
-					<option value=".taco">taco</option>
-				</select>
-
-		</div>
+			<?php
+			$args = array(
+			'post_type' => 'product',
+			);
+			$the_query = new WP_Query( $args );
 
 
-<style>
+			function taglist(){
+
+				$terms = get_the_terms( get_the_ID(), 'ingredient' );
+				$types = get_the_terms( get_the_ID(), 'type_of_food' );
+
+				//var_dump($terms);
+
+				if (is_array($terms) || is_object($terms))
+				{
+					foreach ( $terms as $term ) {
+						$term = $term->name;
+						 echo $term;
+						 echo " ";
+					};
+				}
+
+				if (is_array($types) || is_object($types)) {
+					foreach ( $types as $type ) {
+						$type = $type->name;
+						 echo $type;
+						 echo " ";
+					};
+				}
+			};
 
 
+			function typesort(){
+				$types = get_the_terms( get_the_ID(), 'type_of_food' );
+						foreach ( $types as $type ) {
+						$type = $type->name;
+						echo "<option value='.";
+						echo $type;
+						echo "'>";
+						echo $type;
+						echo "</option>";
+					};
+				};
 
-</style>
-<script>
+
+				function ingredientsort(){
+					$terms = get_the_terms( get_the_ID(), 'ingredient' );
+ 						 foreach ( $terms as $term ) {
+ 						 $term = $term->name;
+							echo "<option value='.";
+							echo $term;
+							echo "'>";
+							echo $term;
+							echo "</option>";
+						};
+					};
+					?>
+		<div class="entry-content products" style="min-height:800px;">
 
 
-</script>
+				<div class="product-sort custom-select">
+
+					<select class="filters-select" id="food_types">
+						<option value="*">Food Types (show all)</option>
+						<?php
+						if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+						typesort();
+						endwhile; endif;
+						wp_reset_query();
+						?>
+					</select>
+
+					<select class="filters-select" id="ingredient_types">
+						<option value="*">Main Ingredient (show all)</option>
+						<?php
+						if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+						ingredientsort();
+
+						// could not remove duplicates VIA php
+						// JS Solution to remove from UI in main.js
+
+						endwhile; endif;
+						wp_reset_query();
+						?>
+					</select>
+
+				</div><!-- product-sort custom-select -->
+
 			<div class="product-grid">
 
-					<div class="prod-single chicken" data-category="chicken">
-						<img src="/wp-content/uploads/2019/11/1X2U9909_CC.png" alt="Product Name">
-						<p>CHICKEN lorem ipsum doler sit</p>
+				<?php
+				if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+				$product_image_1 = get_field('product_image_1');
+				?>
+
+				<a href="<?php the_permalink();?>">
+					<div class="prod-single <?php taglist();?>">
+						<div class="prod-single-2 <?php taglist();?>">
+						<div class="img-wrap" style="background-image:url(<?php echo $product_image_1; ?>);">
+							<img src="<?php echo $product_image_1; ?>" alt="<?php the_title() ;?> - Product Image" style="display:none;">
+						</div>
+						<p><?php the_title() ;?></p>
 						@ @ @ @ @
 					</div>
-
-					<div class="prod-single beef" data-category="beef">
-						<img src="/wp-content/uploads/2019/11/1X2U9909_CC.png" alt="Product Name">
-						<p>BEEF lorem ipsum doler sit</p>
-						@ @ @ @ @
 					</div>
+				</a>
+			<?php endwhile; else: ?> <p>Sorry, there are no products to display</p> <?php endif; ?>
 
-					<div class="prod-single taco" data-category="taco">
-						<img src="/wp-content/uploads/2019/11/1X2U9909_CC.png" alt="Product Name">
-						<p>TACO lorem ipsum doler sit</p>
-						@ @ @ @ @
-					</div>
+				<?php wp_reset_query(); ?>
 
-
-
-					<div class="prod-single chicken" data-category="chicken">
-						<img src="/wp-content/uploads/2019/11/1X2U9909_CC.png" alt="Product Name">
-						<p>CHICKEN lorem ipsum doler sit</p>
-						@ @ @ @ @
-					</div>
-
-					<div class="prod-single taco" data-category="taco">
-						<img src="/wp-content/uploads/2019/11/1X2U9909_CC.png" alt="Product Name">
-						<p>TACO lorem ipsum doler sit</p>
-						@ @ @ @ @
-					</div>
 
 
 			</div>
 
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'gpf_sub' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
 <!-- // content-products.php -->
 </div>

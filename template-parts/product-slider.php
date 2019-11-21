@@ -1,4 +1,4 @@
-<section class="product-slider" style="background-color:rgba(57,146,200,.25);">
+<section class="product-slider">
   <div class="cont">
 
     <?php if (  is_singular('product') ) { ?>

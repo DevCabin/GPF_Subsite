@@ -8,7 +8,7 @@
 
     <div class="cta-2-content">
       <div class="cta-2-left">
-        <img src="/wp-content/uploads/2019/11/pg.png" alt="product guide">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/product-guide@2x.png" alt="product guide">
 
       </div>
 

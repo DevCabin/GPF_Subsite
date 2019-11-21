@@ -173,11 +173,23 @@ Site Main Header
   margin: 0;
   width: 200px;
   margin: 0 14px;
+  min-height: 370px;
   p {
     padding: 0 10px;
     color: $color__textgray;
   }
+  .img-wrap {
+    display: block;
+    height:250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 }
+.product-slider {
+  background-color: rgba(57,146,200,.25);
+}
+
 .home-cta {
   background-color: white;
   .dots {
@@ -694,13 +706,15 @@ Responsive - Large screens
       }
       .home-flourish.product-flourish {
           h2 {
-            margin-top: -50px;
+          margin-top: -58px;
           }
       }
       .product-details .product-flourish img {
         display: block;
       }
-
+      footer.entry-footer {
+        float: left;
+      }
 
 }
 /*--------------------------------------------------------------

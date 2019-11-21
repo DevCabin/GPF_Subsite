@@ -78,6 +78,5 @@ if ( is_page('our-products') | is_page('product-single') | is_singular('product'
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/slick/slick.min.js"></script>
 
 
-
 </body>
 </html>
