@@ -37,20 +37,69 @@ function taglist2(){
 					echo " ";
 				};
 			};
-// In case we need to show "related" products or something. Mainly used on product home page.
+// In case we need to show "related" products or
+// something. Mainly used on product home page.
 
 
-		//<?php taglist2();
+/*
+ * Prepend Facebook, Twitter and Google+ social share buttons to the post's content
+ *
+ */
+function add_share_buttons_before_content( ) {
+
+    global $post;
+
+    // Get the post's URL that will be shared
+    $post_url   = urlencode( esc_url( get_permalink($post->ID) ) );
+
+    // Get the post's title
+    $post_title = urlencode( $post->post_title );
+
+    // Compose the share links for Facebook, Twitter and Google+
+    $facebook_link    = sprintf( 'https://www.facebook.com/sharer/sharer.php?u=%1$s', $post_url );
+    $twitter_link     = sprintf( 'https://twitter.com/intent/tweet?text=%2$s&url=%1$s', $post_url, $post_title );
+		$pinterest_link     = sprintf( 'http://pinterest.com/pin/create/button/?url=u=%1$s', $post_url );
+
+		$img_path = get_stylesheet_directory_uri();
+
+
+    // Wrap the buttons
+    $output = '<ul>';
+
+        // Add the links inside the wrapper
+
+        $output .= '<li><a target="_blank" href="' . $facebook_link . '"><img src="' . $img_path . '/assets/img/Icon-awesome-facebook-f.png" alt=""></a></li>';
+				$output .= '<li><a target="_blank" href="' . $twitter_link . '"><img src="' . $img_path . '/assets/img/Icon-metro-twitter.png" alt=""></a></li>';
+				$output .= '<li><a target="_blank" href="' . $pinterest_link . '"><img src="' . $img_path . '/assets/img/Icon-metro-pinterest.png" alt=""></a></li>';
+				$output .= '<li><a target="_blank" href="https://www.instagram.com/grandprairiefoods/"><img src="' . $img_path . '/assets/img/Icon-awesome-instagram.png" alt=""></a></li>';
+
+    $output .= '</ul>';
+
+    // Return the buttons and the original content
+    echo $output;
+}
+
 ?>
 <!-- content-product.php -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-
-	<?php // gpf_sub_post_thumbnail(); ?>
-
 	<div class="entry-content">
 
 		<div class="cont">
+
+			<div class="breadcrumbs">
+				<ul>
+					<li>
+						<a href="/">Home</a> /
+					</li>
+					<li>
+						<a href="/our-products/">All Products</a> /
+					</li>
+					<li>
+						<?php the_title();?>
+					</li>
+				</ul>
+			</div>
 
 			<div class="product-images">
 
@@ -95,25 +144,23 @@ function taglist2(){
 					<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					</header><!-- .entry-header -->
-				<?php
-				the_content( sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'gpf_sub' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				) );
+				<?php the_content(); ?>
 
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gpf_sub' ),
-					'after'  => '</div>',
-				) );
-				?>
+				<div class="single-social">
+					<span>Share</span>
+						<?php add_share_buttons_before_content(); ?>
+
+				</div>
+
+				<hr>
+				<div class="review-area-one prod-home-reviews">
+					<?php // echo do_shortcode( '[RICH_REVIEWS_SHOW]' ); ?>
+
+					<?php echo do_shortcode( '[RICH_REVIEWS_SNIPPET category="page"]' ); ?>
+
+					<?php // echo do_shortcode( '[RICH_REVIEWS_FORM]' ); ?>
+				</div>
+
 			</div>
 		</div><!-- cont -->
 
@@ -158,7 +205,15 @@ function taglist2(){
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Brown-banner@2x.png" alt="">
 							<h2>REVIEWS</h2>
 					</div>
+						<?php echo do_shortcode( '[RICH_REVIEWS_SHOW]' ); ?>
 
+						<div id="show-review">
+							LEAVE A REVIEW
+						</div>
+						<div id="reviews-form" style="display:none;">
+							<div id="close-review">CLOSE</div>
+							<?php echo do_shortcode( '[RICH_REVIEWS_FORM]' ); ?>
+						</div>
 				</div><!-- cont -->
 			</div><!-- product reviews -->
 			<div class="floater">

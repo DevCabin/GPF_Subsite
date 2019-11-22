@@ -881,6 +881,9 @@ Site Main Header
   .main-navigation li {
     padding-top: 12px; }
 
+.breadcrumbs {
+  display: none; }
+
 .slicknav_nav li a {
   text-align: center; }
 
@@ -957,7 +960,7 @@ Site Main Header
 
 .product-slider .slider-content {
   text-align: center;
-  height: 350px; }
+  height: 400px; }
 
 .product-slider h3 {
   text-align: center;
@@ -973,7 +976,7 @@ Site Main Header
   margin: 0;
   width: 200px;
   margin: 0 14px;
-  min-height: 370px; }
+  min-height: 390px; }
   .prod-single p {
     padding: 0 10px;
     color: #707070; }
@@ -1072,7 +1075,8 @@ Site Main Header
     display: inline-block;
     border: 1px solid #ededed;
     box-shadow: lightgrey 2px 0px 4px 2px;
-    margin: 0 8px 34px 8px; }
+    margin: 0 8px 34px 8px;
+    min-height: 400px; }
 
 .product-sort {
   margin: 14px 8px; }
@@ -1080,8 +1084,6 @@ Site Main Header
 .home-flourish.product-flourish {
   margin-top: 0;
   margin-bottom: 70px; }
-  .home-flourish.product-flourish h2 {
-    margin-top: -58px; }
 
 select.filters-select {
   -webkit-appearance: none;
@@ -1153,12 +1155,88 @@ select::-ms-expand {
   background-color: white; }
 
 .home-flourish.product-flourish h2 {
-  margin-top: 0; }
+  margin-top: -58px; }
 
 .floater, .product-reviews {
   display: block;
   float: left;
   width: 100%; }
+
+.single-social {
+  display: block;
+  margin: 0px 0px 0px 0px; }
+  .single-social span {
+    color: #707070;
+    font-size: 1.2rem; }
+  .single-social ul {
+    position: relative;
+    padding-left: 0;
+    margin: 8px 0px 0px 0px; }
+    .single-social ul li {
+      color: #707070;
+      display: inline-block;
+      list-style-type: none; }
+      .single-social ul li a {
+        color: #707070;
+        text-decoration: none;
+        padding: 0 8px; }
+        .single-social ul li a:hover {
+          text-decoration: underline; }
+
+.testimonial_group .full-testimonial .rr_review_text .drop_cap {
+  display: none; }
+
+.product-slider .slider-content a {
+  text-decoration: none; }
+
+.prod-home-reviews {
+  font-size: 0px;
+  text-decoration: none; }
+  .prod-home-reviews a {
+    text-decoration: none; }
+  .prod-home-reviews .stars {
+    font-size: 1rem; }
+  .prod-home-reviews span.starz {
+    color: white;
+    background-color: #F4C216;
+    padding: 6px 7px;
+    border-radius: 16px;
+    margin: 0 2px; }
+  .prod-home-reviews span.emptystar {
+    background-color: #CECECE; }
+  .prod-home-reviews span.starz:first-of-type {
+    display: none; }
+
+.product-reviews span.starz {
+  color: white;
+  background-color: #F4C216;
+  padding: 6px 7px;
+  border-radius: 16px;
+  margin: 0 2px; }
+.product-reviews span.emptystar {
+  background-color: #CECECE; }
+.product-reviews span.starz:first-of-type {
+  display: none; }
+
+.prod-home-reviews.review-area-one .votes {
+  font-size: 1rem;
+  padding-left: 12px; }
+.prod-home-reviews.review-area-one .votes::after {
+  content: "Reviews"; }
+
+#show-review, #close-review {
+  cursor: pointer;
+  background: gray;
+  width: 175px;
+  text-align: center;
+  padding: 5px 0;
+  color: white; }
+
+#show-review {
+  display: block; }
+
+#show-review.opened {
+  display: none; }
 
 /*--------------------------------------------------------------
 Footer
@@ -1213,10 +1291,30 @@ Responsive - Large screens
   .main-navigation a {
     font-size: 1.2rem; }
 
+  .breadcrumbs {
+    display: block;
+    margin: 25px 0px 0 -10px; }
+    .breadcrumbs ul {
+      margin-left: 0;
+      padding-left: 0; }
+      .breadcrumbs ul li {
+        color: #707070;
+        display: inline-block;
+        list-style-type: none; }
+        .breadcrumbs ul li a {
+          color: #707070;
+          text-decoration: none;
+          padding: 0 8px; }
+          .breadcrumbs ul li a:hover {
+            text-decoration: underline; }
+
   .footer-menu.yellow {
     margin-top: -85px; }
     .footer-menu.yellow li a:hover {
       color: white; }
+
+  .home-flourish.product-flourish h2 {
+    margin-top: 0; }
 
   .page .cont {
     padding: 0; }
@@ -1360,6 +1458,14 @@ Responsive - Large screens
     margin-bottom: 28px; }
   .single-product .product-flourish {
     display: block; }
+  .single-product .entry-content {
+    margin: 1.5em 0 2rem 0; }
+  .single-product .footer-menu.yellow {
+    margin-top: -50px;
+    top: -35px;
+    position: RELATIVE; }
+  .single-product .pre-footer {
+    margin-top: -50px; }
 
   .single-product .product-images .slick-dots li button:before {
     font-size: 20px; }
@@ -1387,6 +1493,9 @@ Responsive - Large screens
 
   #page .product-content .entry-header h1 {
     padding: 0 !important; }
+
+  .review-area-one {
+    color: #707070; }
 
   .product-reviews {
     width: 100%;
@@ -1443,7 +1552,8 @@ Responsive - mid-size screens
     display: inline-block;
     float: left;
     padding-left: 2%; }
-  .single-product .prod-single {
+
+  .single-product .product-images .prod-single {
     width: 275px; } }
 @media screen and (min-width: 600px) and (max-width: 860px) {
   .site-header {
@@ -1511,7 +1621,8 @@ Responsive - all above small
   .site-branding {
     width: 250px;
     height: 150px;
-    float: left; }
+    float: left;
+    margin-top: -4px; }
 
   .site-header .site-branding img {
     max-width: 285px;
@@ -1536,7 +1647,7 @@ Responsive - all above small
 
   .prod-single {
     width: 250px;
-    margin: 0 25px; }
+    margin: 0 22px; }
     .prod-single p {
       padding: 0 20px; }
 

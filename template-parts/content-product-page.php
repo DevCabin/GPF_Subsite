@@ -122,7 +122,9 @@
 							<img src="<?php echo $product_image_1; ?>" alt="<?php the_title() ;?> - Product Image" style="display:none;">
 						</div>
 						<p><?php the_title() ;?></p>
-						@ @ @ @ @
+						<div class="prod-home-reviews">
+							<?php echo do_shortcode( '[RICH_REVIEWS_SNIPPET category="page"]' ); ?>
+						</div>		
 					</div>
 					</div>
 				</a>

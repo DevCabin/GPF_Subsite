@@ -87,4 +87,49 @@ $(document).ready(function () {
   });
 
 
+
+// let's style those stars!
+  $('.prod-home-reviews .stars').each(function (index) {
+      var characters = $(this).text().split("");
+        $this = $(this);
+        $this.empty();
+        $.each(characters, function (i, el) {
+          $this.append("<span class='starz'>" + el + "</span>");
+        });
+  });
+  $('.product-reviews .stars').each(function (index) {
+      var characters = $(this).text().split("");
+        $this = $(this);
+        $this.empty();
+        $.each(characters, function (i, el) {
+          $this.append("<span class='starz'>" + el + "</span>");
+        });
+  });
+  $('.starz').each(function() {
+      if ($(this).text() == "	") {
+          $this = $(this);
+          $this.remove();
+    } else if ($(this).text() == "☆") {
+      $this = $(this);
+      $this.addClass('emptystar');
+    };
+  });
+  // Show/hide review form
+  $("#show-review").click(function(){
+    $("#reviews-form").show();
+    $(this).addClass("opened");
+  });
+
+  $("#close-review").click(function(){
+     $("#reviews-form").hide();
+     $('#show-review').removeClass("opened");
+  });
+
+
+
+
+
+
+
+
 }); //$(document).ready(function ()
