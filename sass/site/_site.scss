@@ -47,9 +47,17 @@ Site Main Header
     }
   }
   .top-search {
-    input {
+    input[type="search"]{
       border-radius: 20px;
       padding: 2px 0 2px 12px;
+    }
+      input[type="submit"]{
+      line-height: 0;
+      height: 0;
+      padding: 0;
+      border: 0;
+      position: absolute;
+      font-size: 0;
     }
   }
 }
@@ -117,6 +125,9 @@ Site Main Header
     &:hover{
       color: $color__yellow;
       text-decoration: underline;
+    }
+    &:visited{
+      color: white;
     }
 }
 
@@ -530,6 +541,26 @@ select::-ms-expand {
   display: none;
 }
 
+.search-results {
+  .content-area {
+    padding:0 4%;
+  }
+}
+.error404 {
+  .prod-single {
+    width: 15%;
+    min-width: 180px;
+    float: left;
+  }
+  .img-wrap {
+    height: 205px;
+  }
+}
+.sidebar-right {
+  float: right;
+  width: 30%;
+}
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -728,8 +759,12 @@ Responsive - Large screens
         float:right;
         text-align: right;
       }
-      .info-left, .info-right{
+      .info-left {
         padding-top: 2rem;
+        padding-bottom: 0;
+      }
+      .info-right{
+        padding-top: .75rem;
         padding-bottom: 0;
       }
 

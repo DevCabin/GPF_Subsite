@@ -9,7 +9,8 @@
 
 get_header();
 ?>
-
+<!-- search.php -->
+<div class="cont">
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -46,10 +47,18 @@ get_header();
 
 		endif;
 		?>
+		</div><!-- cont -->
+		<?php
+		get_template_part( 'template-parts/home', 'cta-2' );
+		?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
+	<?php
+	//get_sidebar();
+	?>
+
+
 <?php
-get_sidebar();
 get_footer();

@@ -860,9 +860,16 @@ Site Main Header
       top: 4px;
       left: -4px;
       font-weight: lighter; }
-  .top-nav .top-search input {
+  .top-nav .top-search input[type="search"] {
     border-radius: 20px;
     padding: 2px 0 2px 12px; }
+  .top-nav .top-search input[type="submit"] {
+    line-height: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    font-size: 0; }
 
 .site-branding {
   width: 75%;
@@ -922,6 +929,8 @@ Site Main Header
   .btn:hover {
     color: #F4C216;
     text-decoration: underline; }
+  .btn:visited {
+    color: white; }
 
 .home-flourish {
   display: block;
@@ -1238,6 +1247,20 @@ select::-ms-expand {
 #show-review.opened {
   display: none; }
 
+.search-results .content-area {
+  padding: 0 4%; }
+
+.error404 .prod-single {
+  width: 15%;
+  min-width: 180px;
+  float: left; }
+.error404 .img-wrap {
+  height: 205px; }
+
+.sidebar-right {
+  float: right;
+  width: 30%; }
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -1420,8 +1443,12 @@ Responsive - Large screens
     float: right;
     text-align: right; }
 
-  .info-left, .info-right {
+  .info-left {
     padding-top: 2rem;
+    padding-bottom: 0; }
+
+  .info-right {
+    padding-top: .75rem;
     padding-bottom: 0; }
 
   .contact-map {

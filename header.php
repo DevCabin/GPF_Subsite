@@ -32,10 +32,11 @@
 		<div class="cont">
 			<div class="top-nav">
 				<div  class="home-link">
-					<a href="/"><span>&lt;</span> Grand Prairie Foods</a>
+					<a href="https://grandprairiefoods.com/"><span>&lt;</span> Grand Prairie Foods</a>
 				</div>
 				<div class="top-search">
-					<input type="search" placeholder="Search">
+					<!--<input type="search" placeholder="Search">-->
+					<?php get_search_form( ); ?>
 				</div>
 			</div>
 			<div class="site-branding">

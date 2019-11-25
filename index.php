@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-
+<!-- index.php -->
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -49,6 +49,8 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+
+		get_template_part( 'template-parts/home', 'cta-2' );
 		?>
 
 		</main><!-- #main -->

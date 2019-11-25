@@ -13,8 +13,15 @@ $footer_color = 'default';
 
 if ( is_page('our-products') | is_page('product-single') | is_singular('product') ) {
 	$footer_color = 'yellow';
+
 }
 
+$footer_logo = ot_get_option( 'footer_area_logo', 'Default Value');
+$physical_address = ot_get_option( 'physical_address' );
+$facebook_url = ot_get_option( 'facebook_url' );
+$twitter_url = ot_get_option( 'twitter_url' );
+$instagram_url = ot_get_option( 'instagram_url' );
+//$pinterest_url = ot_get_option( 'pinterest_url' );
 ?>
 
 	</div><!-- #content -->
@@ -45,9 +52,9 @@ if ( is_page('our-products') | is_page('product-single') | is_singular('product'
 			</div>
 
 			<div class="pre-footer">
-				<img src="/wp-content/uploads/2019/11/foot-logo.png" alt="grand prairie foods logo version 2">
-				<p>Manufactured by Grand Prairie Foods, inc.<br>
-1400 N. Cleveland Ave., Sioux falls, SD 57103    www.grandprairiefoods.com</p>
+				<img src="<?php echo $footer_logo; ?>" alt="logo version 2">
+				<?php echo $physical_address; ?>
+
 			</div>
 
 			<div class="site-info">
@@ -56,9 +63,11 @@ if ( is_page('our-products') | is_page('product-single') | is_singular('product'
 				</div>
 				<div class="info-center">
 					<ul>
-						<li><a href=""><img src="/wp-content/uploads/2019/11/facebook@2x.png" alt="social icon"></a></li>
-						<li><a href=""><img src="/wp-content/uploads/2019/11/twitter@2x.png" alt="social icon"></a></li>
-						<li><a href=""><img src="/wp-content/uploads/2019/11/insta@2x.png" alt="social icon"></a></li>
+						<li><a href="<?php echo $facebook_url; ?>"><img src="/wp-content/uploads/2019/11/facebook@2x.png" alt="social icon"></a></li>
+						<li><a href="<?php echo $twitter_url; ?>"><img src="/wp-content/uploads/2019/11/twitter@2x.png" alt="social icon"></a></li>
+						<?php if ($instagram_url != "") {?>
+							<li><a href="<?php echo $instagram_url; ?>"><img src="/wp-content/uploads/2019/11/insta@2x.png" alt="social icon"></a></li>
+						<?php } ?>
 					</ul>
 				</div>
         <div class="info-right">

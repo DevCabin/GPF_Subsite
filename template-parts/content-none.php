@@ -8,7 +8,8 @@
  */
 
 ?>
-
+<!-- content-none.php -->
+<div class="cont">
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'gpf_sub' ); ?></h1>
@@ -45,7 +46,19 @@
 			<?php
 			get_search_form();
 
-		endif;
+			?>
+			</div><!-- cont -->
+			<?php
+			get_template_part( 'template-parts/home', 'cta-2' );
+			?>
+
+			</main><!-- #main -->
+		</section><!-- #primary -->
+
+		<?php
+		//get_sidebar();
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+
+
+	<?php
+	get_footer();
