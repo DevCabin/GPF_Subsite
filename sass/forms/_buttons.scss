@@ -21,13 +21,16 @@ input[type="submit"] {
 	}
 }
 input[type="submit"].btn {
-    background: #A5191D;
-    padding: 7px 60px;
-    border-radius: 24px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .75rem;
-    font-weight: normal;
-		cursor:pointer;
+	background: #A5191D;
+	padding: 7px 60px;
+	border-radius: 24px;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: .75rem;
+	font-weight: normal;
+	cursor: pointer;
+	border: none;
+	line-height: 1.5;
+	font-size: 16px;
 }

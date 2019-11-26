@@ -87,6 +87,9 @@ Site Main Header
 .slicknav_nav li a {
     text-align: center;
 }
+.slick-dots li.slick-active button:before {
+    opacity: 0.35;
+  }
 .main-banner {
   height: 450px;
   background-size: cover;
@@ -202,6 +205,7 @@ Site Main Header
 }
 .product-slider {
   background-color: rgba(57,146,200,.25);
+  padding-bottom: 40px;
 }
 
 .home-cta {
@@ -313,7 +317,7 @@ Site Main Header
   .prod-single {
     display: inline-block;
     border: 1px solid #ededed;
-    box-shadow: lightgrey 2px 0px 4px 2px;
+    box-shadow: lightgrey 4px 4px 4px 0px;
     margin: 0 8px 34px 8px;
     min-height:400px;
   }
@@ -499,6 +503,12 @@ select::-ms-expand {
   }
   span.starz:first-of-type {
     display: none;
+  }
+  .votes {
+    font-size: 1rem;
+    color: #707070;
+    left: 4px;
+    position: relative;
   }
 
 }
@@ -687,6 +697,16 @@ Responsive - Large screens
       margin-top:-30px;
     }
   }
+  .prod-home-reviews {
+    position: absolute;
+    bottom: 18px;
+    margin-left: 35px;
+  }
+  .front-page .prod-home-reviews {
+      position: fixed;
+      bottom: 18px;
+      margin-left: 35px;
+  }
 
 
   .home-cta {
@@ -802,11 +822,12 @@ Responsive - Large screens
         }
         .product-images {
           .prod-single {
-            width: 545px;
+            width: 538px;
           }
           .slick-slide img {
-             border: 1px solid gray;
-             margin-bottom: 10px;
+            border: 1px solid lightgray;
+            margin-bottom: 10px;
+            box-shadow: lightgrey 4px 4px 2px 0px;
            }
         }
         .floater {
@@ -863,6 +884,9 @@ Responsive - Large screens
 
       .review-area-one {
         color: $color__textgray;
+        position: absolute;
+        bottom: -24px;
+        margin-left: 0;
       }
 
       .product-reviews {
@@ -870,7 +894,6 @@ Responsive - Large screens
         background-color: white;
         float: left;
         padding-top:20px;
-
         min-height:200px;
         h2 {
           color: white;
@@ -1089,9 +1112,66 @@ Responsive - all above small
       }
     }
 
-
-
   // footer
+} // @media screen and (min-width:600px)
 
+/*--------------------------------------------------------------
+Responsive - small - all below 600px
+--------------------------------------------------------------*/
 
-}
+@media screen and (max-width:600px) {
+	.home-flourish h2 {
+	    color: white;
+  		position: relative;
+  		background-color: #66483A;
+	    width: 80%;
+	    text-align: center;
+	    margin: 60px auto 0 auto;
+	}
+	.home-flourish img {
+		  display: none;
+	}
+	.home-flourish-2 h3 {
+	    color: white;
+  		position: relative;
+  		background-color: #66483A;
+	    width: 80%;
+	    text-align: center;
+	    margin: 0px auto 0 auto;
+		  padding: 6px 0;
+	}
+	.home-flourish-2 img {
+		  display: none;
+	}
+	.slicknav_nav li a {
+	    font-size: 22px;
+	}
+	.home-cta h3 {
+	    padding-right: 0;
+	}
+	.site-header {
+		  height: 202px;
+	}
+	.banner-content {
+	    position: relative;
+	    padding: 12px;
+	    background-color: rgba(255, 255, 255, 0.73);
+	    width: 72%;
+	    margin: 40px 14%;
+	    padding-bottom: 24px;
+	}
+	.home-flourish.product-flourish h2 {
+	    margin-top: 20px;
+	}
+	select.filters-select {
+  		background-position: 275px;
+  		width: 350px;
+	}
+	.product-grid .prod-single {
+		  width: 350px;
+	}
+  .product-slider {
+    padding-bottom: 20px;
+  }
+
+} /* @media screen and (max-width:600px) */

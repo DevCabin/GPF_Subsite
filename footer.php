@@ -52,7 +52,9 @@ $instagram_url = ot_get_option( 'instagram_url' );
 			</div>
 
 			<div class="pre-footer">
-				<img src="<?php echo $footer_logo; ?>" alt="logo version 2">
+				<a href="https://grandprairiefoods.com/">
+					<img src="<?php echo $footer_logo; ?>" alt="logo version 2">
+				</a>
 				<?php echo $physical_address; ?>
 
 			</div>
