@@ -33,9 +33,9 @@ $instagram_url = ot_get_option( 'instagram_url' );
 				<div class="menu-flourish">
 
 				<?php if ($footer_color == 'yellow') { ?>
-					<img id="yellow-flourish" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Yellow-banner@2x.png" alt="">
+					<img id="yellow-flourish" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/footer-banner.png" alt="">
 				<?php } else { ?>
-					<img id="white-flourish" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/white-footer-nav-block@2x.png" alt="">
+					<img id="white-flourish" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/footer-banner.png" alt="">
 				<?php }; ?>
 
 					<nav id="footer-navigation" class="secondary-navigation">

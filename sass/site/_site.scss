@@ -22,6 +22,9 @@ Site Main Header
 .site-header {
   background-color: $color__yellow;
   height: auto;
+  background-image: url('/wp-content/themes/GPF_Subsite-master/assets/img/GPF-pattern@2x.png');
+  background-repeat: repeat-x;
+  background-size: contain;
 }
 .top-nav {
   float: none;
@@ -66,6 +69,7 @@ Site Main Header
     width: 75%;
     float: none;
     margin: 0 auto;
+
 }
 .site-header .site-branding img {
     width: auto;
@@ -104,7 +108,7 @@ Site Main Header
   margin: 0px 12.5%;
   h2 {
     text-transform: uppercase;
-    color: $color__darkblue;
+    color: $color__newred;
     font-weight: normal;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -117,7 +121,7 @@ Site Main Header
 }
 
 .btn {
-    background: $color__red;
+    background: $color__newblue;
     padding: 12px 55px;
     border-radius: 24px;
     color: white;
@@ -238,10 +242,10 @@ Site Main Header
     padding-top: 24px;
 }
 .home-cta-2 {
-    background-color: $color__yellow;
+    background-color: $color__lightgray;
     display: inline-block;
     .cont {
-      background-color: $color__yellow;
+      background-color: $color__lightgray;
     }
     h3 {
       color: white;
@@ -339,7 +343,7 @@ select.filters-select {
   -webkit-appearance: none;
   background: {
     color: $bg-color;
-    image: url("/wp-content/themes/GPF_Subsite/assets/img/down-caret-1.png");
+    image: url("/wp-content/themes/GPF_Subsite-master/assets/img/down-caret-1.png");
 
     position: 175px 20px;
     repeat: no-repeat;
@@ -661,10 +665,10 @@ Responsive - Large screens
     padding: 0;
   }
   .site-header {
-    height: 125px;
+    height: 132px;
   }
   .main-navigation {
-    top: -65px;
+    top: -108px;
   }
   .main-navigation li {
     padding-top: 0;
@@ -673,6 +677,7 @@ Responsive - Large screens
     margin: 0 0;
     width: 32%;
     right: -55%;
+    text-align: center;
   }
   .site-branding, .top-nav {
     padding: none;
@@ -751,7 +756,7 @@ Responsive - Large screens
     }
     .yellow-flourish {
       display: block;
-      background-image:url('/wp-content/themes/GPF_Subsite/assets/img/yellow-flourish-t-1.png');
+      background-image:url('/wp-content/themes/GPF_Subsite-master/assets/img/yellow-flourish-t-1.png');
       background-color: $color__darkblue;
       background-size: cover;
       background-position: center;
@@ -1041,15 +1046,20 @@ Responsive - all above small
     }
   }
   .site-branding {
-    width: 250px;
-    height: 150px;
-    float: left;
-    margin-top:-4px;
+        width: auto;
+        height: 205px;
+        float: left;
+        margin-top: 0;
+        background-image: url('/wp-content/themes/GPF_Subsite-master/assets/img/GPF_logobannerbackground@2x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 20px 30px;
   }
   .site-header .site-branding img {
-    max-width: 285px;
+    //max-width: 285px;
     height: auto;
     float: left;
+    width: 280px;
   }
   .home-flourish {
     h2 {
@@ -1120,6 +1130,9 @@ Responsive - small - all below 600px
 --------------------------------------------------------------*/
 
 @media screen and (max-width:600px) {
+  .site-branding {
+    background-color: white;
+  }
 	.home-flourish h2 {
 	    color: white;
   		position: relative;

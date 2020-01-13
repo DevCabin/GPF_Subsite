@@ -15,7 +15,7 @@ $cta_button_link = ot_get_option( 'pre_footer_cta_button_link' );
   <div class="cont">
 
     <div class="home-flourish-2">
-      <img src="/wp-content/uploads/2019/11/home-flourish.png" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/orange-banner.png" alt="">
       <h3><?php echo $cta_title; ?></h3>
     </div>
 
@@ -34,11 +34,11 @@ $cta_button_link = ot_get_option( 'pre_footer_cta_button_link' );
       </div>
 
 
-    </div> <!-- cta-2-content -->
+    </div> <!-- cta-2-content
 
 <div class="yellow-flourish">
 
-</div>
+</div>-->
 
   </div> <!-- container -->
 </section>

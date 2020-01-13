@@ -12,7 +12,7 @@
 
 
 <div class="home-flourish">
-<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Brown-banner@2x.png" alt="">
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/orange-banner.png" alt="">
 	<h2><?php the_field('below_banner_headline') ;?></h2>
 </div>
 

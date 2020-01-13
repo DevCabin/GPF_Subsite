@@ -146,6 +146,9 @@ Footer menu
 		a {
 			color: black;
 			text-transform: uppercase;
+			&:hover {
+				color:white;
+			}
 		}
 	}
 }
