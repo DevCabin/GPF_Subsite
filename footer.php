@@ -65,10 +65,10 @@ $instagram_url = ot_get_option( 'instagram_url' );
 				</div>
 				<div class="info-center">
 					<ul>
-						<li><a href="<?php echo $facebook_url; ?>"><img src="/wp-content/uploads/2019/11/facebook@2x.png" alt="social icon"></a></li>
-						<li><a href="<?php echo $twitter_url; ?>"><img src="/wp-content/uploads/2019/11/twitter@2x.png" alt="social icon"></a></li>
+						<li><a href="<?php echo $facebook_url; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fb.png" alt="social icon"></a></li>
+						<li><a href="<?php echo $twitter_url; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tw.png" alt="social icon"></a></li>
 						<?php if ($instagram_url != "") {?>
-							<li><a href="<?php echo $instagram_url; ?>"><img src="/wp-content/uploads/2019/11/insta@2x.png" alt="social icon"></a></li>
+							<li><a href="<?php echo $instagram_url; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/in.png" alt="social icon"></a></li>
 						<?php } ?>
 					</ul>
 				</div>

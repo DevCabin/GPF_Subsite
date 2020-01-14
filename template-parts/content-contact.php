@@ -25,9 +25,11 @@
 				<?php the_field('contact_form');?>
 			</div>
 
-		<div class="contact-map">
-			<?php the_field('map_area_code');?>
-		</div>
+			<?php if (get_field('add_a_map') == true) { ?>
+				<div class="contact-map">
+					<?php the_field('map_area_code');?>
+				</div>
+			<?php }; ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

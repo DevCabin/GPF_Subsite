@@ -202,7 +202,7 @@ function add_share_buttons_before_content( ) {
 			<div class="product-reviews">
 				<div class="cont">
 					<div class="home-flourish product-flourish">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Brown-banner@2x.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/orange-banner.png" alt="">
 							<h2>REVIEWS</h2>
 					</div>
 						<?php echo do_shortcode( '[RICH_REVIEWS_SHOW]' ); ?>

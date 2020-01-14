@@ -498,7 +498,7 @@ input[type="submit"] {
     border-color: #aaa #bbb #bbb; }
 
 input[type="submit"].btn {
-  background: #A5191D;
+  background: #186983;
   padding: 7px 60px;
   border-radius: 24px;
   color: white;
@@ -984,7 +984,7 @@ Site Main Header
 
 .product-slider h3 {
   text-align: center;
-  color: #66483B;
+  color: #186983;
   text-transform: uppercase;
   font-size: 2rem;
   padding-top: 22px; }
@@ -1019,7 +1019,7 @@ Site Main Header
     margin: 26px auto 16px 4%;
     float: left; }
   .home-cta h3 {
-    color: #273976;
+    color: black;
     font-weight: normal;
     font-size: 1.5rem;
     padding-right: 115px; }
@@ -1085,7 +1085,7 @@ Site Main Header
   margin: 0; }
 .page .entry-header h1 {
   text-transform: uppercase;
-  color: #66483B;
+  color: #186983;
   font-size: 1.5rem;
   padding: 0;
   margin: 0; }
@@ -1104,7 +1104,7 @@ Site Main Header
 
 .home-flourish.product-flourish {
   margin-top: 0;
-  margin-bottom: 70px; }
+  margin-bottom: 135px; }
 
 select.filters-select {
   -webkit-appearance: none;
@@ -1125,7 +1125,7 @@ select::-ms-expand {
   display: none; }
 
 .single-product h1 {
-  color: #66483B;
+  color: #186983;
   text-transform: uppercase; }
 .single-product .product-images, .single-product .product-content {
   width: 98%;
@@ -1144,12 +1144,12 @@ select::-ms-expand {
   font-size: 10px; }
 
 .product-details {
-  background-color: rgba(57, 146, 200, 0.25);
+  background-color: #F0EBE8;
   float: left;
   width: 100%;
   padding: 12px 2%; }
   .product-details h2 {
-    color: #66483B;
+    color: #186983;
     text-align: center; }
   .product-details table {
     width: 98%;
@@ -1282,7 +1282,7 @@ select::-ms-expand {
 Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #273976;
+  background-color: #691636;
   padding: 50px 0;
   color: white; }
   .site-footer div {
@@ -1415,7 +1415,7 @@ Responsive - Large screens
       margin: 26px auto 16px auto;
       float: none; }
     .home-cta h3 {
-      color: #273976;
+      color: black;
       font-weight: normal;
       font-size: 1.5rem;
       padding-right: 115px; }
@@ -1437,19 +1437,20 @@ Responsive - Large screens
     display: block;
     height: 350px;
     width: 100%;
-    background-color: #273976;
+    background-color: #691636;
     position: relative;
     margin-top: -300px;
     z-index: 2; }
 
   .yellow-flourish {
     display: block;
-    background-image: url("/wp-content/themes/GPF_Subsite-master/assets/img/yellow-flourish-t-1.png");
-    background-color: #273976;
+    background-image: url("/wp-content/themes/GPF_Subsite-master/assets/img/prefooter-bg@2x.png");
+    background-color: #691636;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     width: 1140px;
-    height: 80px;
+    height: 95px;
     position: relative;
     z-index: 3; }
 
@@ -1586,7 +1587,7 @@ Responsive - mid-size screens
     height: 135px; }
 
   .main-navigation {
-    top: -100px; }
+    top: -130px; }
 
   .home-cta {
     display: inline-block !important; }
@@ -1693,7 +1694,7 @@ Responsive - all above small
     width: 280px; }
 
   .home-flourish h2 {
-    margin-top: -58px; }
+    margin-top: -56px; }
 
   .front-page .cont .entry-content {
     margin-top: 2%;
@@ -1743,13 +1744,19 @@ Responsive - small - all below 600px
 --------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
   .site-branding {
-    background-color: white; }
+    width: 100%;
+    height: 250px;
+    margin-top: 0;
+    background-image: url("/wp-content/themes/GPF_Subsite-master/assets/img/GPF_logobannerbackground@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px 40px; }
 
   .home-flourish h2 {
     color: white;
     position: relative;
-    background-color: #66483A;
-    width: 80%;
+    background-color: #DD4F1F;
+    width: 90%;
     text-align: center;
     margin: 60px auto 0 auto; }
 
@@ -1759,7 +1766,7 @@ Responsive - small - all below 600px
   .home-flourish-2 h3 {
     color: white;
     position: relative;
-    background-color: #66483A;
+    background-color: #DD4F1F;
     width: 80%;
     text-align: center;
     margin: 0px auto 0 auto;
@@ -1768,6 +1775,24 @@ Responsive - small - all below 600px
   .home-flourish-2 img {
     display: none; }
 
+  .home-flourish {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    margin-top: -33px;
+    width: 90%;
+    height: 60px;
+    float: none; }
+
+  .home-flourish.product-flourish {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+  select.filters-select {
+    margin-bottom: 12px; }
+
   .slicknav_nav li a {
     font-size: 22px; }
 
@@ -1775,7 +1800,7 @@ Responsive - small - all below 600px
     padding-right: 0; }
 
   .site-header {
-    height: 202px; }
+    height: 330px; }
 
   .banner-content {
     position: relative;
@@ -1786,7 +1811,10 @@ Responsive - small - all below 600px
     padding-bottom: 24px; }
 
   .home-flourish.product-flourish h2 {
-    margin-top: 20px; }
+    margin-top: 20px;
+    padding: 4px;
+    margin-bottom: 0px;
+    font-size: 20px; }
 
   select.filters-select {
     background-position: 275px;

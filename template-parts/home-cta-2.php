@@ -22,7 +22,7 @@ $cta_button_link = ot_get_option( 'pre_footer_cta_button_link' );
     <div class="cta-2-content">
       <div class="cta-2-left">
         <a href="<?php echo $cta_button_link; ?>">
-          <img src="<?php echo $cta_img; ?>" alt="Product Guide Placeholder">
+          <img src="<?php echo $cta_img; ?>" alt="Product Guide Placeholder img">
         </a>
 
       </div>
@@ -34,11 +34,11 @@ $cta_button_link = ot_get_option( 'pre_footer_cta_button_link' );
       </div>
 
 
-    </div> <!-- cta-2-content
+    </div> <!-- cta-2-content -->
 
 <div class="yellow-flourish">
 
-</div>-->
+</div>
 
   </div> <!-- container -->
 </section>

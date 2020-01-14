@@ -72,9 +72,9 @@ $(document).ready(function () {
   var optionValues =[];
   $('#ingredient_types option').each(function(){
    if($.inArray(this.value, optionValues) >-1){
-  		$(this).remove()
+      $(this).remove()
    } else {
-  		optionValues.push(this.value);
+      optionValues.push(this.value);
    }
   });
   var optionValues_2 =[];
@@ -114,6 +114,21 @@ $(document).ready(function () {
       $this.addClass('emptystar');
     };
   });
+  $('span.votes').each(function() {
+    // check if product review count is 0
+    // if so, add class to get reviews
+    var string = $(this).text();
+    substring = "0";
+
+    if (string.includes(substring)) {
+      $this = $(this);
+      $(this).parents('.prod-home-reviews').addClass('novotes');
+      //$this.addClass('novotes');
+    };
+
+    // console.log("Checking..." + string.includes(substring));
+  });
+
   // Show/hide review form
   $("#show-review").click(function(){
     $("#reviews-form").show();
@@ -124,12 +139,5 @@ $(document).ready(function () {
      $("#reviews-form").hide();
      $('#show-review').removeClass("opened");
   });
-
-
-
-
-
-
-
 
 }); //$(document).ready(function ()

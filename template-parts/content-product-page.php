@@ -14,7 +14,7 @@
 		<?php // the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="home-flourish product-flourish">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Brown-banner@2x.png" alt="">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/orange-banner.png" alt="">
 			<h2>OUR PRODUCTS</h2>
 		</div>
 	</header><!-- .entry-header -->
@@ -36,7 +36,7 @@
 				if (is_array($terms) || is_object($terms))
 				{
 					foreach ( $terms as $term ) {
-						$term = $term->name;
+						$term = $term->slug;
 						 echo $term;
 						 echo " ";
 					};
@@ -44,7 +44,7 @@
 
 				if (is_array($types) || is_object($types)) {
 					foreach ( $types as $type ) {
-						$type = $type->name;
+						$type = $type->slug;
 						 echo $type;
 						 echo " ";
 					};
@@ -54,29 +54,36 @@
 
 			function typesort(){
 				$types = get_the_terms( get_the_ID(), 'type_of_food' );
+				if (is_array($types) || is_object($types)) {
 						foreach ( $types as $type ) {
-						$type = $type->name;
+						$typeslug = $type->slug;
+						$typename = $type->name;
 						echo "<option value='.";
-						echo $type;
+						echo $typeslug;
 						echo "'>";
-						echo $type;
+						echo $typename;
 						echo "</option>";
+						};
 					};
 				};
 
 
 				function ingredientsort(){
 					$terms = get_the_terms( get_the_ID(), 'ingredient' );
+					if (is_array($terms) || is_object($terms)) {
  						 foreach ( $terms as $term ) {
- 						 $term = $term->name;
+ 						 $termslug = $term->slug;
+						 $termname = $term->name;
 							echo "<option value='.";
-							echo $term;
+							echo $termslug;
 							echo "'>";
-							echo $term;
+							echo $termname;
 							echo "</option>";
+							};
 						};
 					};
 					?>
+
 		<div class="entry-content products" style="min-height:800px;">
 
 
@@ -124,7 +131,7 @@
 						<p><?php the_title() ;?></p>
 						<div class="prod-home-reviews">
 							<?php echo do_shortcode( '[RICH_REVIEWS_SNIPPET category="page"]' ); ?>
-						</div>		
+						</div>
 					</div>
 					</div>
 				</a>
