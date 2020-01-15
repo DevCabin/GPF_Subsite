@@ -207,7 +207,7 @@ Site Main Header
   }
 }
 .product-slider {
-  background-color: rgba(57,146,200,.25);
+  background-color: $color__lightblue;
   padding-bottom: 40px;
 }
 
@@ -622,11 +622,14 @@ Footer
   top: 8px;
   width: 85px;
 }
-
+.mob-only {
+  display: none !important;
+}
 /*--------------------------------------------------------------
 Responsive - Large screens
 --------------------------------------------------------------*/
 @media screen and (min-width:1140px){
+
   .main-navigation a {
     font-size: 1.2rem;
   }
@@ -692,9 +695,10 @@ Responsive - Large screens
       @include center-block;
       text-align: center;
       position: relative;
-      padding-top: 24px;
+      padding-top: 0px;
       width: auto;
       height: 60px;
+      top:-30px;
     h2 {
       color: white;
       position: relative;
@@ -711,8 +715,15 @@ Responsive - Large screens
       bottom: 18px;
       margin-left: 35px;
   }
-
-
+  select#ingredient_types {
+    position: relative;
+    left: 20px;
+  }
+  .prod-desc {
+    position: relative;
+    color: #707070;
+    padding-bottom: 8px;
+  }
   .home-cta {
       background-color: white;
       .dots {
@@ -994,6 +1005,10 @@ Responsive - mid-size screens
 }
 
 @media screen and (min-width:860px) and (max-width:1139px){
+  .site-branding {
+    margin-top: -12px !important;
+  }
+
   .home-cta .cta-left, .home-cta .cta-right {
     width: 48% !important;
     display: inline-block !important;
@@ -1049,7 +1064,7 @@ Responsive - all above small
         width: auto;
         height: 205px;
         float: left;
-        margin-top: 0;
+        margin-top: -8px;
         background-image: url('/wp-content/themes/GPF_Subsite-master/assets/img/GPF_logobannerbackground@2x.png');
         background-repeat: no-repeat;
         background-size: contain;
@@ -1094,6 +1109,7 @@ Responsive - all above small
       display: block;
       position: relative;
       z-index: 3;
+      margin-top: 84px;
       h3 {
         color: white;
         margin-top: -68px;
@@ -1104,7 +1120,7 @@ Responsive - all above small
         width: 49%;
         display: inline-block;
         float: none;
-        margin-top: 65px;
+        margin-top: 0px;
         padding-left: 8%;
       }
       .cta-2-right {
@@ -1130,14 +1146,43 @@ Responsive - small - all below 600px
 --------------------------------------------------------------*/
 
 @media screen and (max-width:600px) {
+  .mob-only {
+    display: block !important;
+  }
+  .site-header {
+      background-size: auto;
+  }
   .site-branding {
       width: 100%;
-      height: 250px;
+      height: 202px;
       margin-top: 0;
-      background-image: url('/wp-content/themes/GPF_Subsite-master/assets/img/GPF_logobannerbackground@2x.png');
+      background-image: none;
       background-repeat: no-repeat;
       background-size: contain;
-      padding: 20px 40px;
+      padding: 0;
+      background-color: white;
+      text-align: center;
+      display: block;
+      z-index: 2;
+      border: 4px #1A1818 solid;
+      position: relative;
+      top: 45px;
+  }
+
+  .site-branding:after {
+        content: '';
+        position: relative;
+        top: -141px;
+        left: 0px;
+        z-index: 1;
+        display: block;
+        border: 4px solid #EFAC14;
+        width: 100%;
+        height: 194px;
+  }
+  .site-header .site-branding img {
+      position: relative;
+      top:20px;
   }
 	.home-flourish h2 {
 	    color: white;

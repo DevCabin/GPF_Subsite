@@ -88,7 +88,9 @@
 
 
 				<div class="product-sort custom-select">
-
+					<div class="prod-desc">
+						Sort By
+					</div>
 					<select class="filters-select" id="food_types">
 						<option value="*">Food Types (show all)</option>
 						<?php
@@ -112,6 +114,7 @@
 						wp_reset_query();
 						?>
 					</select>
+
 
 				</div><!-- product-sort custom-select -->
 
